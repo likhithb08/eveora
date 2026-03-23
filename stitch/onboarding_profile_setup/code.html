@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2D1DB5",
+                        "accent": "#FF5F1F",
+                        "background-light": "#F7F6FE",
+                        "background-dark": "#1a162e",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .orange-pulse {
+            box-shadow: 0 0 0 0 rgba(255, 95, 31, 0.4);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 95, 31, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 95, 31, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 95, 31, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[480px] bg-white dark:bg-slate-900 shadow-xl rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="p-6 sm:p-8">
+<!-- Progress Bar Section -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="text-[10px] font-semibold text-primary uppercase tracking-wider">Role</span>
+</div>
+<div class="flex-1 h-[2px] bg-primary mx-2 -mt-4"></div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center mb-1 orange-pulse">
+<span class="text-sm font-bold">2</span>
+</div>
+<span class="text-[10px] font-semibold text-accent uppercase tracking-wider">Profile</span>
+</div>
+<div class="flex-1 h-[2px] bg-slate-200 dark:bg-slate-700 mx-2 -mt-4"></div>
+<div class="flex flex-col items-center opacity-40">
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 flex items-center justify-center mb-1">
+<span class="text-sm font-bold">3</span>
+</div>
+<span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Verify</span>
+</div>
+</div>
+</div>
+<!-- Header -->
+<div class="text-center mb-8">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Set up your profile</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Help the evora.club community know you better</p>
+</div>
+<!-- Profile Photo Upload -->
+<div class="flex flex-col items-center mb-8">
+<div class="relative group">
+<div class="w-24 h-24 rounded-full border-2 border-dashed border-[#C4B8FF] flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-800 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors overflow-hidden">
+<span class="material-symbols-outlined text-[#C4B8FF] text-3xl mb-1">add_a_photo</span>
+<span class="text-[10px] font-medium text-slate-500">Add photo</span>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center border-2 border-white dark:border-slate-900">
+<span class="material-symbols-outlined text-sm">edit</span>
+</div>
+</div>
+</div>
+<!-- Form Fields -->
+<form class="space-y-5">
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Full Name</label>
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Phone Number</label>
+<div class="flex gap-2">
+<div class="w-20 px-3 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-center font-medium">
+                            +91
+                        </div>
+<input class="flex-1 px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="Mobile number" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Neighbourhood</label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none pr-10">
+<option disabled="" selected="" value="">Select your area</option>
+<option value="indiranagar">Indiranagar</option>
+<option value="koramangala">Koramangala</option>
+<option value="hSR">HSR Layout</option>
+<option value="jayanagar">Jayanagar</option>
+<option value="whitefield">Whitefield</option>
+</select>
+<div class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 py-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+<span class="text-sm text-slate-600 dark:text-slate-400">I confirm that I am above 18 years of age</span>
+</div>
+<div class="pt-4">
+<button class="w-full bg-accent hover:bg-accent/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-accent/20 transition-all flex items-center justify-center gap-2 group" type="submit">
+                        Continue
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Footer -->
+<div class="px-8 pb-8 text-center">
+<p class="text-xs text-slate-400 dark:text-slate-500">
+                By continuing, you agree to evora.club's <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>
+</p>
+</div>
+</div>
+</body></html>

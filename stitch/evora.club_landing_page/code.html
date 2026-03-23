@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evora.club - Spontaneous Micro-events in Urban India</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              indigo: '#2D1DB5',
+              orange: '#FF5F1F',
+              bgLight: '#F7F6FE',
+              accentBg: '#EDE9FF',
+              warningBg: '#FFFBE6',
+              warningText: '#B7770D',
+              dangerBg: '#FFF0EA',
+            }
+          },
+          borderRadius: {
+            'custom': '12px',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(1deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: float 7s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+    .animate-float-slow {
+      animation: float 8s ease-in-out infinite;
+      animation-delay: 2s;
+    }
+    .pulsing-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #10B981;
+      border-radius: 50%;
+      margin-right: 8px;
+      box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0px rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0px rgba(16, 185, 129, 0); }
+    }
+    .glass-nav {
+      background: rgba(247, 246, 254, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-gradient {
+      background: linear-gradient(160deg, #F7F6FE 0%, #EDE9FF 60%, #FFF0EA 100%);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-900 overflow-x-hidden">
+<!-- BEGIN: Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-brand-indigo/5">
+<div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-0 text-2xl tracking-tight">
+<span class="font-bold text-brand-indigo">evora</span><span class="font-bold text-brand-orange">.club</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-brand-orange text-white px-5 py-2.5 rounded-custom font-semibold text-sm transition-transform hover:scale-105 active:scale-95" data-purpose="become-host-btn">
+          Become a Host
+        </button>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<main class="hero-gradient min-h-screen pt-32 pb-20 overflow-hidden">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+<!-- Content Container -->
+<section class="flex-1 text-left" data-purpose="hero-content">
+<div class="inline-flex items-center bg-white border border-brand-orange/20 px-4 py-1.5 rounded-full mb-8 shadow-sm">
+<span class="text-brand-orange font-bold text-xs uppercase tracking-wider">Now in Koramangala &amp; HSR Layout</span>
+</div>
+<h1 class="text-5xl lg:text-[48px] leading-[1.1] font-bold text-brand-indigo mb-6">
+          Stop planning.<br/>Start doing.
+        </h1>
+<p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+          Find people nearby for spontaneous activities — badminton, coffee, gaming, runs. Right now.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<button class="bg-brand-orange text-white h-[44px] px-8 rounded-custom font-bold flex items-center justify-center transition-all hover:brightness-110">
+            Become a Founding Host →
+          </button>
+<button class="bg-brand-indigo text-white h-[44px] px-8 rounded-custom font-bold flex items-center justify-center transition-all hover:brightness-110">
+            Find Events Near Me
+          </button>
+</div>
+<div class="flex items-center text-sm font-medium text-slate-600" data-purpose="social-proof">
+<span class="pulsing-dot"></span>
+          12 events happening in Koramangala today
+        </div>
+</section>
+<!-- Visual Container (Floating Cards) -->
+<section class="flex-1 relative w-full h-[500px] lg:h-auto" data-purpose="floating-event-cards">
+<div class="relative w-full max-w-[400px] mx-auto lg:ml-auto">
+<!-- Card 3 (Bottom) -->
+<div class="animate-float-slow absolute top-24 left-10 lg:left-20 w-full z-10 opacity-60 scale-90">
+<div class="bg-white border-2 border-[#E8E4FF] border-l-[3px] border-l-brand-indigo rounded-2xl p-4 shadow-sm">
+<div class="flex justify-between items-start mb-3">
+<div class="flex gap-2">
+<span class="bg-brand-accentBg text-brand-indigo px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">🏸 Badminton</span>
+</div>
+<div class="text-[10px] text-slate-400 font-medium">📍 2.4 km away</div>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Host" class="w-6 h-6 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZT9E3wxR56i1kQhmtnlpJen1C78Hi-M7FQ8Wj6L2At5Qu9IqzN4mVbH-p5opDqwerR1H-hzin2CqJdi07Q7po2jHunNUFmlyptjS494cNzlJArLk0E7VBh45gIDZRHtjssKHY6rl9o1Rh9lvUs-IAgAIpBj1KxDQHQ1aQsJZTmmcjsmabbWQ5sAxDEMGqU5g0fXBu9sGvp1eoXZ2eIe5L5zZVqPjpEUnthcp9qmkdgnow0j6KWtNlY1cp6eB8lJT4LYeO_FQIHa8X"/>
+<div>
+<h3 class="text-sm font-bold text-slate-800 leading-tight">Doubles at Play! HSR</h3>
+<p class="text-[10px] text-slate-500">hosted by Rahul S.</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="bg-brand-accentBg text-brand-indigo text-[10px] font-bold px-2 py-1 rounded-md">3+ spots left</span>
+<button class="border border-brand-indigo text-brand-indigo text-[10px] font-bold px-3 py-1 rounded-lg">Request</button>
+</div>
+</div>
+</div>
+<!-- Card 2 (Middle) -->
+<div class="animate-float-delayed absolute top-12 left-5 lg:left-10 w-full z-20 opacity-90 scale-95">
+<div class="bg-white border-2 border-[#E8E4FF] border-l-[3px] border-l-brand-indigo rounded-2xl p-5 shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-2">
+<span class="bg-brand-warningBg text-brand-warningText px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">☕️ Coffee</span>
+</div>
+<div class="text-[11px] text-slate-500 font-medium">📍 0.8 km away</div>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Host" class="w-6 h-6 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnZwW4X9wnDiGzYUF3XXPqnrXXLM0PR10aNvw3afpoyBW6KK8nzdfTXW77zpkXf09AOls00oDJeVLrN4PSysHyb3qKhsGZObTRJYs2Fo4IkhSr5g_x3vqlTTdabP_cwbuvXbxsMxjLCj0_JbuePcKCeuZR6rj6s-WBtcehRIAWmM1JZ-C4WJLX-za15VdaUmcehBVdqMUiUV4G-K7yZJpyww3c1az-mT0pYlz7_IQuzMmWzCrrSMFy_lt5Ucd1s1V3STIfWOCm-9ll"/>
+<div>
+<h3 class="text-base font-bold text-slate-800 leading-tight">Quick break at Third Wave</h3>
+<p class="text-xs text-slate-500">hosted by Ananya K.</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="bg-brand-warningBg text-brand-warningText text-[11px] font-bold px-2 py-1 rounded-md">2 spots left</span>
+<button class="border border-brand-indigo text-brand-indigo text-xs font-bold px-4 py-1.5 rounded-lg">Request to Join</button>
+</div>
+</div>
+</div>
+<!-- Card 1 (Top/Focus) -->
+<div class="animate-float relative w-full z-30">
+<div class="bg-white border-2 border-[#E8E4FF] border-l-[3px] border-l-brand-indigo rounded-2xl p-5 shadow-xl">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2">
+<span class="text-lg">🏃‍♂️</span>
+<span class="bg-brand-dangerBg text-brand-orange px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Run</span>
+<span class="text-[11px] text-slate-500 font-medium ml-2">📍 1.2 km away • ~14 min walk</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Host" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfEEWyck07DB5fyC99o_bmj2CjKAT7vRESuIEskyUoWQg4WPQgaeD4sooPvCMFbt1ZPC_VA29iCADyRFpmmJyS60dN0GhC1yp0LEjHOe1gwNlGtfwSuy5ixMqCntl-x_L7nVHyf7ev7yrVjmOIam2i_KZVVu-kfYPuYft2i-pk-Knn_aUckfLCKq4QSAKGoBXcySk4kc0Adm4oI8sioJB8VVA7kz1kH_RZy_-q2hSTfw8Blk9c66hK7eJEHBTJzPhiDBsA_oupoMnW"/>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-800 leading-tight">5km Evening Run</h3>
+<p class="text-sm text-slate-500">hosted by Vikram Singh</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] text-slate-400 font-bold uppercase">Starts at 6:30 PM</span>
+<span class="bg-brand-dangerBg text-brand-orange text-[11px] font-bold px-2 py-1 rounded-md w-fit">1 spot left</span>
+</div>
+<button class="border-2 border-brand-indigo text-brand-indigo h-[40px] px-6 rounded-lg font-bold text-sm hover:bg-brand-indigo hover:text-white transition-colors">
+                  Request to Join
+                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- END: Hero Section -->
+<!-- BEGIN: Information Sections (Placeholders for extended page) -->
+<section class="bg-white py-20 border-t border-slate-100">
+<div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-3 gap-12 text-left">
+<div data-purpose="feature-card">
+<h4 class="text-brand-indigo font-bold text-xl mb-3">Hyper-Local</h4>
+<p class="text-slate-500 leading-relaxed">We focus on activities within a 3km radius. If you can't walk there in 20 mins, it's not a micro-event.</p>
+</div>
+<div data-purpose="feature-card">
+<h4 class="text-brand-indigo font-bold text-xl mb-3">Verified Community</h4>
+<p class="text-slate-500 leading-relaxed">No bots, no spam. Every host is verified through their professional profiles to ensure a safe experience.</p>
+</div>
+<div data-purpose="feature-card">
+<h4 class="text-brand-indigo font-bold text-xl mb-3">No Chat Fatigue</h4>
+<p class="text-slate-500 leading-relaxed">Events have a simple Request-Accept flow. Once accepted, you get the location and a timed group chat.</p>
+</div>
+</div>
+</section>
+<!-- END: Information Sections -->
+<!-- BEGIN: Footer -->
+<footer class="bg-slate-50 py-12 border-t border-slate-200">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-0 text-xl tracking-tight">
+<span class="font-bold text-brand-indigo">evora</span><span class="font-bold text-brand-orange">.club</span>
+</div>
+<p class="text-slate-400 text-sm">© 2024 Evora Social. Making urban India a little less lonely.</p>
+<div class="flex gap-6 text-sm font-semibold text-brand-indigo">
+<a class="hover:text-brand-orange" href="#">Safety</a>
+<a class="hover:text-brand-orange" href="#">Terms</a>
+<a class="hover:text-brand-orange" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

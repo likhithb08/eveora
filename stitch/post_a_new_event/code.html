@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post a New Event | evora.club</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#F7F6FE] text-slate-900 font-display">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 bg-white border-b border-slate-200 px-4 py-3 md:px-10">
+<div class="max-w-[1200px] mx-auto flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100 rounded-full transition-colors">
+<span class="material-symbols-outlined text-slate-700">arrow_back</span>
+</button>
+<h1 class="text-[20px] font-semibold text-slate-900">Post a New Event</h1>
+</div>
+</nav>
+<main class="max-w-[1200px] mx-auto p-4 md:p-10 pb-32">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- LEFT COLUMN: FORM -->
+<div class="w-full lg:w-[60%] flex flex-col gap-6">
+<!-- Section 1: Activity -->
+<section class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</span>
+<h2 class="text-lg font-bold">What's the activity?</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">sports_tennis</span>
+<span class="text-sm font-medium">Sports</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">sports_esports</span>
+<span class="text-sm font-medium">Gaming</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border-2 border-primary bg-primary/5 gap-1">
+<span class="material-symbols-outlined text-primary">coffee</span>
+<span class="text-sm font-bold text-primary">Coffee</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">restaurant</span>
+<span class="text-sm font-medium">Dining</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">music_note</span>
+<span class="text-sm font-medium">Music</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">movie</span>
+<span class="text-sm font-medium">Movie</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">flight</span>
+<span class="text-sm font-medium">Travel</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary/50 transition-all gap-1">
+<span class="material-symbols-outlined text-slate-600">fitness_center</span>
+<span class="text-sm font-medium">Fitness</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Event Title</label>
+<input class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-3 text-sm" maxlength="60" placeholder="e.g. Badminton doubles — need 2 players" type="text"/>
+<span class="text-[10px] text-right text-slate-400">0/60</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Description</label>
+<textarea class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-3 text-sm" maxlength="200" placeholder="Any extra details..." rows="3"></textarea>
+<span class="text-[10px] text-right text-slate-400">0/200</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Time -->
+<section class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">2</span>
+<h2 class="text-lg font-bold">When is it?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Date</label>
+<div class="flex gap-2">
+<button class="flex-1 py-2 px-4 rounded-lg bg-primary text-white text-sm font-semibold">Today</button>
+<button class="flex-1 py-2 px-4 rounded-lg bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-slate-200 transition-colors">Tomorrow</button>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Start Time</label>
+<select class="w-full rounded-lg border-slate-200 focus:border-primary focus:ring-primary text-sm">
+<option>06:00 PM</option>
+<option>06:30 PM</option>
+<option>07:00 PM</option>
+<option>07:30 PM</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="text-sm font-semibold text-slate-700">Duration</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-xs font-medium hover:bg-slate-50">30 min</button>
+<button class="px-4 py-1.5 rounded-full border-2 border-primary bg-primary/5 text-primary text-xs font-bold">1 hr</button>
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-xs font-medium hover:bg-slate-50">1.5 hr</button>
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-xs font-medium hover:bg-slate-50">2 hr</button>
+<button class="px-4 py-1.5 rounded-full border border-slate-200 text-xs font-medium hover:bg-slate-50">2+ hr</button>
+</div>
+</div>
+</section>
+<!-- Section 3: People -->
+<section class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">3</span>
+<h2 class="text-lg font-bold">How many people?</h2>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 bg-slate-50 rounded-xl p-1 border border-slate-100">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white hover:shadow-sm text-slate-600 transition-all">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="text-xl font-bold w-4 text-center">4</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white hover:shadow-sm text-slate-600 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="flex gap-2">
+<div class="w-4 h-4 rounded-full bg-primary"></div>
+<div class="w-4 h-4 rounded-full border-2 border-slate-200"></div>
+<div class="w-4 h-4 rounded-full border-2 border-slate-200"></div>
+<div class="w-4 h-4 rounded-full border-2 border-slate-200"></div>
+</div>
+</div>
+</section>
+<!-- Section 4: Location -->
+<section class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">4</span>
+<h2 class="text-lg font-bold">Where is it?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<button class="flex flex-col items-center p-3 rounded-xl border-2 border-primary bg-primary/5 gap-1">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-xs font-bold text-primary">Public venue</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-xl border border-slate-200 hover:border-slate-300 gap-1">
+<span class="material-symbols-outlined text-slate-500">home</span>
+<span class="text-xs font-medium text-slate-600">My place</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-xl border border-slate-200 hover:border-slate-300 gap-1">
+<span class="material-symbols-outlined text-slate-500">park</span>
+<span class="text-xs font-medium text-slate-600">Open space</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Venue Name</label>
+<input class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-3 text-sm" placeholder="e.g. Giga Koramangala" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Neighbourhood</label>
+<div class="flex flex-wrap gap-2">
+<div class="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg text-xs font-semibold">
+                                    Koramangala
+                                    <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">Full Address</label>
+<textarea class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-3 text-sm" placeholder="Include floor, building name, etc." rows="2"></textarea>
+</div>
+<div class="flex items-start gap-3 p-3 bg-amber-50 border border-amber-100 rounded-xl">
+<span class="material-symbols-outlined text-amber-600 text-[20px]">warning</span>
+<p class="text-xs text-amber-800 font-medium">This is only shared with people you approve. Never public.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: WhatsApp -->
+<section class="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">5</span>
+<h2 class="text-lg font-bold">WhatsApp Group</h2>
+</div>
+<div class="flex items-start gap-3 p-4 bg-[#E0F7F1] border-l-[3px] border-[#0D9E75] rounded-r-xl">
+<span class="material-symbols-outlined text-[#0D9E75]">info</span>
+<p class="text-sm text-slate-800">Create your WhatsApp group first and paste the invite link here. It helps coordinating with guests.</p>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700">WA Link</label>
+<input class="w-full rounded-xl border-slate-200 focus:border-primary focus:ring-primary p-3 text-sm" placeholder="https://chat.whatsapp.com/..." type="text"/>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: STICKY PREVIEW -->
+<div class="w-full lg:w-[40%]">
+<div class="sticky top-24 flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500 ml-1">This is how your event will look</span>
+<!-- Event Preview Card -->
+<div class="bg-white rounded-xl overflow-hidden shadow-md border-l-[3px] border-indigo-600 transition-all hover:shadow-lg">
+<div class="p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xl">☕</span>
+<span class="text-sm font-bold text-slate-800">Coffee</span>
+<span class="text-[10px] text-slate-400">•</span>
+<span class="text-xs font-medium text-slate-500">1.2 km away</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">more_horiz</span>
+</div>
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-slate-900 leading-tight">Coffee and Networking at Giga</h3>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Portrait of the event host avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaw97KUuPPqFFHd1MxIpGlD1WFnOG-Tz3ifvE_myQjj0zeG5Gpd8au3Py8fE9rf3YDj_8OSScAJvVCl3u4gtmJ-NTo-64SabM8IWHN39Au1hvkJvU_eNVRMR-rTGPQTSmUg8FbyZL6OF7fhQXP25bbOB7pn9TFGgkkfvj9gnxNqk3usy1dJyZc5yLmQ1dHt7hIUvaurdEhRnV4eRb6dKSqHvy8MGrAzGW564xjBztPvRAXzUoRGEumo2clJ4PJh5rd3tY2moTnf1Y1"/>
+</div>
+<span class="text-xs text-slate-500">Hosted by <span class="font-semibold text-slate-700">Rohan M.</span></span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-slate-600">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="text-xs font-semibold">Today, 06:00 PM</span>
+</div>
+<div class="inline-flex items-center bg-slate-100 rounded-full px-2 py-0.5 w-fit mt-1">
+<span class="text-[10px] font-bold text-slate-600">1 / 4 SPOTS FILLED</span>
+</div>
+</div>
+<button class="px-4 py-2 rounded-lg border-2 border-primary text-primary text-xs font-bold hover:bg-primary/5 transition-colors">
+                                    Request to Join
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 flex gap-3">
+<span class="material-symbols-outlined text-indigo-600">tips_and_updates</span>
+<p class="text-xs text-indigo-900 leading-relaxed">
+<span class="font-bold">Pro-tip:</span> Detailed descriptions get 40% more join requests. Mention what you're excited about!
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Sticky Bar -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E8E4FF] px-4 py-4 md:px-10 z-50">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<span class="text-xs text-slate-400 font-medium hidden md:block">Your event expires 30 mins after start time</span>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-6 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 rounded-xl transition-colors">Save Draft</button>
+<button class="flex-[2] md:flex-none px-8 py-3 rounded-xl bg-[#FFB89A] text-white text-sm font-bold flex items-center justify-center gap-2 cursor-not-allowed">
+                    Post Event
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>
