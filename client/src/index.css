@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2D1DB5;
+  --color-accent: #FF5F1F;
+  --color-bg-page: #F7F6FE;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #5A5A7A;
+  --color-text-muted: #9898B0;
+  --color-light-purple: #C4B8FF;
+  --color-bg-track: #E8E4FF;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-text-primary bg-bg-page font-sans;
+  }
+}
+
+@layer components {
+  /* Typography */
+  h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Shared UI Elements */
+  .benefit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 13px;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  .form-container {
+    max-width: 560px;
+    width: 100%;
+    background: white;
+    border: 1px solid var(--color-bg-track);
+    border-radius: 20px;
+    padding: 40px;
+  }
+  .chip {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  .chip-inactive {
+    background-color: #F0EEFF;
+    color: var(--color-text-secondary);
+  }
+  .chip-active {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .radio-pill {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .input-field {
+    width: 100%;
+    border: 1px solid var(--color-bg-track);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary);
+  }
+  /* Helper for no scrollbars */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
