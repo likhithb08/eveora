@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2D1DB5",
+                        "accent": "#FF5F1F",
+                        "success": "#0D9E75",
+                        "danger": "#E8294A",
+                        "warning": "#FFB000",
+                        "background-light": "#F7F6FE",
+                        "background-dark": "#1A1625",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .tab-active { border-bottom: 3px solid #2D1DB5; color: #2D1DB5; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 md:px-10 lg:px-20 py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary font-bold text-xl">
+<span class="material-symbols-outlined text-3xl">explore</span>
+<span class="tracking-tight">evora.club</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium text-sm transition-colors" href="#">Dashboard</a>
+<a class="text-primary font-semibold text-sm" href="#">My Events</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium text-sm transition-colors" href="#">Explore</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium text-sm transition-colors" href="#">Profile</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm w-64 focus:ring-2 focus:ring-primary/20" placeholder="Search events..." type="text"/>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Avatar of a male user with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDomPiBMhSIbi2K1uQVl2xKpr9c6mdft5KRmb4rohIk9gLm27tCgfZs_JRYnAk4rTeOOH8H6WsG-tzjBlnb8Zn1obqXZYCorKp8j0QW7o6sN6WMPJapJo-Iu6oR14MgfH9UZDun1rL50RONFbPNJrzen6gYdkOLkA257LMBK7nhc4RFI5XwyA3bzyuEkHPkXKZ2a-nKmNmYxWDjgm1QeXzj8NqcYmDTxho9pvTDLJEiV_ccjwf9k90y5XD1o5k60IAjJ-HDLqm2rLoE"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Sticky Header with Tabs -->
+<div class="sticky top-[65px] z-40 bg-background-light dark:bg-background-dark pt-6 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-4xl mx-auto px-4">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">Manage Events</h1>
+<div class="flex gap-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
+<a class="pb-3 text-primary font-bold border-b-4 border-primary px-1" href="#active">Active (2)</a>
+<a class="pb-3 text-slate-500 dark:text-slate-400 font-medium hover:text-primary px-1" href="#requests">Requests (3)</a>
+<a class="pb-3 text-slate-500 dark:text-slate-400 font-medium hover:text-primary px-1" href="#past">Past Events</a>
+</div>
+</div>
+</div>
+<main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+<!-- Active Events Section -->
+<section class="space-y-6" id="active">
+<h2 class="text-sm font-bold uppercase tracking-wider text-slate-500">Active Events</h2>
+<!-- Active Event Card -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl border-l-[6px] border-accent shadow-sm overflow-hidden p-6 flex flex-col md:flex-row gap-6">
+<div class="flex-1 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Evening Badminton</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-[#E0F7F1] text-success text-xs font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse"></span> LIVE
+                            </span>
+</div>
+<p class="text-accent font-semibold text-sm">Starts in 1h 20m</p>
+</div>
+<div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-slate-600 dark:text-slate-400 text-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">location_on</span>
+                            Koramangala, Bangalore
+                        </div>
+<div class="flex items-center gap-1.5 font-medium text-primary">
+<span class="material-symbols-outlined text-lg">group</span>
+                            2/4 players joined
+                        </div>
+</div>
+<div class="flex items-center -space-x-3">
+<img alt="Participant" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900" data-alt="Avatar of participant 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMsKb73nIpXgp-I4hIqX9Auo2DOgMSq1Os8cPe4lfgYZ0GN3o5KawrDjTl9Wx2pXd84OCHmRRsjx5VyYtz41fsfgQNVdVs7W5oRQHAgZeJtp4Fal_8qoOkfFOMTlVRr9fI4SzykwTaXi0i0HwyYKv7PsUG4hGerLiwfWdxn2gGIERkjPjcP5Z3ZLIBAx3cczuKvvTikDQOjAcA05kD-iN5wAuUaJhHJKHdC-F8KqQ8JvOGeF5nBcXgCyrdvveSC6-MPakmJ2gXwNa6"/>
+<img alt="Participant" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900" data-alt="Avatar of participant 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3_JOF9qBeHC9gITsu2y7UBQ-so0DsGPy87Lof5RR_h0EwFjv-U0g0stlld2cxcNvyN4lJidHig_gdfjrCmmevM_qIe_VOPxkALJ5WqoxpQk6ElOZk56L41Egl37ShPUdTIAS-fuD0arSM73W3nMwLnyZI0Gs8WAuz-IBK_WIoIxJp0FwLVCN3WlM4kJvPVsa9stqAKNLk-o40hKqchKdeQSLZ85abPl13TL0a9irwr1GKeqOYyR0V6NPo445z18pc_4YyHr4Mac1f"/>
+<div class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xs font-bold text-slate-400">+2</div>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<button class="px-5 py-2.5 rounded-xl border-2 border-primary text-primary font-bold text-sm hover:bg-primary/5 transition-colors">
+                            View Requests (3)
+                        </button>
+<button class="px-5 py-2.5 rounded-xl text-danger font-bold text-sm hover:bg-danger/10 transition-colors">
+                            Cancel Event
+                        </button>
+</div>
+</div>
+<div class="w-full md:w-48 h-32 md:h-auto rounded-xl overflow-hidden bg-slate-100">
+<div class="w-full h-full bg-cover bg-center" data-alt="Green badminton court from above" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxq9BA_34YEWGJpUp_D2MIwGWZ3hdSUQTqERAfjz7JbTyE4S8mGQR_sCLCmPEq0xBLRzZ1x1TbYJyvQW_Miv1P41lhxCEwrNNebBD4pNgyEAXYgbra16aPQooY4ztSMWdnQgFs7Ekt6qKfpnBazFS1folBJBn2vlwpKr66XMTykJZb_nhsKWd77108vDirkdBLp4uL2Bpbw8qRkbMFkVjORoLzzwHRMTxbwj1ZsMfDLmJPOGFblzMIjrLbvaytcUYO7S4j_2pYFjsk')"></div>
+</div>
+</div>
+</section>
+<!-- Requests Section -->
+<section class="space-y-6" id="requests">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold uppercase tracking-wider text-slate-500">Pending Requests</h2>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">history</span>
+<h3 class="font-bold text-slate-800 dark:text-slate-200">Evening Badminton <span class="text-slate-400 font-normal">(3 pending)</span></h3>
+</div>
+<!-- Request Card -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="bg-amber-50 dark:bg-amber-900/20 px-4 py-2 flex items-center gap-2 text-amber-700 dark:text-amber-400 text-xs font-bold">
+<span class="material-symbols-outlined text-base">timer</span>
+                        Approve within 5 mins or this request expires
+                    </div>
+<div class="p-5 flex items-start justify-between gap-4">
+<div class="flex gap-4">
+<div class="relative">
+<img alt="User" class="w-14 h-14 rounded-full bg-slate-100" data-alt="Avatar of user Alex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkknb1zrrXKtchzCUTo00i0gtqxTT2XJxllEBL-FXNT2EWg3HHSXQmu1aXhbKyI4h2k8EcBMCXsXjO3R7qLufROIPqlXB3c_Q4hwxg1CP1LrILnnrN-rNgNQr6y60r_iOlT2QB48O88huPLNNZZoqL9wA9uyxuG5_Ib-_4QLjoleM-LvSqwPdR8Cgcmzvd7ewF7JtKsc1et0yqkfOveKrBal0nbOPLTc832YWjRW4ce-Gmc0RFmATO1ymvyqCgwYXmpAVDM6I9jaX"/>
+<div class="absolute -bottom-1 -right-1 bg-blue-500 text-white p-0.5 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-[10px] block">verified</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<h4 class="font-bold text-slate-900 dark:text-white">Alex Rivera</h4>
+<span class="text-xs text-slate-400 font-normal">Requested 5 mins ago</span>
+</div>
+<div class="flex gap-2">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-600 dark:text-slate-400">SPORTS</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded-md text-[10px] font-bold text-slate-600 dark:text-slate-400">FITNESS</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-danger text-sm font-bold hover:underline transition-all">Decline</button>
+<button class="bg-success text-white px-6 py-2 rounded-xl text-sm font-bold hover:opacity-90 transition-all shadow-lg shadow-success/20">Approve</button>
+</div>
+</div>
+</div>
+<!-- Request Card 2 (Compact) -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-5 flex items-center justify-between gap-4">
+<div class="flex gap-4 items-center">
+<img alt="User" class="w-12 h-12 rounded-full bg-slate-100" data-alt="Avatar of user Mila" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrbDIMunAHr3jNWCocZTlamFHzRb_Byz2AzFx9CpfoS0Pru2Jo-SJ6uAvzdhJkk9XnkW-pWmLHBstFxw3qux2A9qR2fGzulqK_yaEW5n8zQ5ne9O6vLa5k_CCBNLVVhaHcYmlf7UEh8Pa9cN2Ed_Q1pmmt6GEnsfo_2ooHaRUlhhP0MUtkiG2l6yZ-WIPkD7HF2sCCKXUTqvbm7BfsdPf6lxYZnRGZ_mc0UV1z16aP3sW2hrIyUaKVap8MejrPvXXiEl56uhdnA5bB"/>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Mila Chen</h4>
+<p class="text-xs text-slate-400">Requested 12 mins ago • Sports, Yoga</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-danger text-sm font-bold hover:underline">Decline</button>
+<button class="bg-success text-white px-6 py-2 rounded-xl text-sm font-bold shadow-lg shadow-success/20">Approve</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events Section -->
+<section class="space-y-6" id="past">
+<h2 class="text-sm font-bold uppercase tracking-wider text-slate-500">Past Events</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Past Event Card -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl border-l-[6px] border-[#E8E4FF] shadow-sm p-5 space-y-4">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Morning Yoga Flow</h3>
+<p class="text-xs text-slate-400">Oct 24, 2023 • Cubbon Park</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="text-xs font-semibold text-slate-600 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span> 4 attended
+                            </span>
+<span class="text-xs font-bold text-amber-500 flex items-center gap-1">
+                                4.8 <span class="material-symbols-outlined text-sm fill-current">star</span>
+</span>
+</div>
+<a class="text-primary text-xs font-bold hover:underline" href="#">View details</a>
+</div>
+</div>
+<!-- Past Event Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl border-l-[6px] border-[#E8E4FF] shadow-sm p-5 space-y-4">
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Board Game Night</h3>
+<p class="text-xs text-slate-400">Oct 12, 2023 • HSR Layout</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="text-xs font-semibold text-slate-600 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">group</span> 6 attended
+                            </span>
+<span class="text-xs font-bold text-amber-500 flex items-center gap-1">
+                                5.0 <span class="material-symbols-outlined text-sm fill-current">star</span>
+</span>
+</div>
+<a class="text-primary text-xs font-bold hover:underline" href="#">View details</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty State Example (Hidden by default or for demo) -->
+<section class="py-12 flex flex-col items-center justify-center text-center space-y-6">
+<div class="w-48 h-48 bg-primary/5 rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary text-7xl opacity-40">calendar_today</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">No events yet</h3>
+<p class="text-slate-500 max-w-xs mx-auto">Start hosting your own activities and build your local community!</p>
+</div>
+<button class="bg-accent text-white px-8 py-3 rounded-2xl font-bold shadow-xl shadow-accent/20 hover:scale-105 transition-transform">
+                Post your first event
+            </button>
+</section>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-10 text-center">
+<p class="text-slate-400 text-sm">© 2023 evora.club • Made for the curious</p>
+</footer>
+</body></html>

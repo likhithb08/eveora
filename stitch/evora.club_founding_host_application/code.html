@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Become a Founding Host | Evora.club</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#2D1DB5',
+            'accent': '#FF5F1F',
+            'bg-page': '#F7F6FE',
+            'text-primary': '#1A1A2E',
+            'text-secondary': '#5A5A7A',
+            'text-muted': '#9898B0',
+            'light-purple': '#C4B8FF',
+            'bg-track': '#E8E4FF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="typography">
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: 700;
+      color: white;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    body {
+      color: #1A1A2E;
+      background-color: #F7F6FE;
+    }
+  </style>
+<style data-purpose="custom-ui-elements">
+    .benefit-card {
+      background: white;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 13px;
+      color: #1A1A2E;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .form-container {
+      max-width: 560px;
+      width: 100%;
+      background: white;
+      border: 1px solid #E8E4FF;
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .chip {
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .chip-inactive {
+      background-color: #F0EEFF;
+      color: #5A5A7A;
+    }
+    .chip-active {
+      background-color: #2D1DB5;
+      color: white;
+    }
+    .radio-pill {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      border-radius: 9999px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .input-field {
+      width: 100%;
+      border: 1px solid #E8E4FF;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 15px;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #2D1DB5;
+      ring: 1px solid #2D1DB5;
+    }
+  </style>
+</head>
+<body class="font-sans">
+<!-- BEGIN: Hero Section -->
+<header class="bg-primary w-full py-[60px] px-10 overflow-hidden">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<!-- Left Content -->
+<div class="flex-1 space-y-6">
+<span class="eyebrow bg-white text-primary px-3 py-1 rounded-full inline-block">
+          Only 50 spots available
+        </span>
+<h1>Become a Founding Host</h1>
+<p class="text-light-purple text-lg max-w-lg leading-relaxed">
+          Be the pioneer of your neighborhood. We're hand-selecting 50 community leaders in Koramangala and HSR Layout to launch the future of social clubs.
+        </p>
+</div>
+<!-- Right Content: Benefits -->
+<div class="flex-1 w-full flex flex-col gap-4 max-w-sm">
+<div class="benefit-card">
+<span class="text-xl">🏅</span>
+<span><strong>Founding Host badge</strong> — forever on your profile</span>
+</div>
+<div class="benefit-card">
+<span class="text-xl">⚡</span>
+<span><strong>First access</strong> — before public launch</span>
+</div>
+<div class="benefit-card">
+<span class="text-xl">🎯</span>
+<span><strong>Shape the product</strong> — your feedback matters</span>
+</div>
+</div>
+</div>
+</header>
+<!-- END: Hero Section -->
+<!-- BEGIN: Progress Tracker -->
+<section class="max-w-6xl mx-auto mt-12 px-4">
+<div class="w-full max-w-3xl mx-auto text-center">
+<p class="text-text-secondary font-semibold mb-3">31 of 50 founding host spots filled</p>
+<div class="w-full h-2 bg-bg-track rounded-full">
+<!-- Progress Fill: 31/50 = 62% -->
+<div class="h-full bg-accent rounded-full" style="width: 62%;"></div>
+</div>
+</div>
+</section>
+<!-- END: Progress Tracker -->
+<!-- BEGIN: Application Form Section -->
+<main class="py-16 px-4 flex flex-col items-center">
+<div class="form-container">
+<form action="#" class="space-y-8" method="POST">
+<!-- Field Group: Basic Info -->
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-2">Full Name</label>
+<input class="input-field" placeholder="John Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-2">Phone Number</label>
+<div class="flex">
+<span class="inline-flex items-center px-4 rounded-l-md border border-r-0 border-[#E8E4FF] bg-gray-50 text-text-secondary text-sm">
+                +91
+              </span>
+<input class="input-field !rounded-l-none" placeholder="00000 00000" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-1">Instagram Handle</label>
+<input class="input-field" placeholder="@yourhandle" type="text"/>
+<p class="text-text-muted text-[12px] mt-1">Optional but preferred for profile verification.</p>
+</div>
+</div>
+<!-- Field Group: Location -->
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-2">Neighbourhood</label>
+<select class="input-field">
+<option>Select your location</option>
+<option>Koramangala</option>
+<option>HSR Layout</option>
+<option>Indiranagar</option>
+<option>Jayanagar</option>
+</select>
+</div>
+<!-- Field Group: Categories -->
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-3">Event Categories (Pick at least 2)</label>
+<div class="flex flex-wrap gap-2">
+<div class="chip chip-active">Sports</div>
+<div class="chip chip-inactive">Gaming</div>
+<div class="chip chip-inactive">Coffee</div>
+<div class="chip chip-active">Food</div>
+<div class="chip chip-inactive">Fitness</div>
+<div class="chip chip-inactive">Study</div>
+<div class="chip chip-inactive">Music</div>
+<div class="chip chip-inactive">Creative</div>
+</div>
+</div>
+<!-- Field Group: Frequency -->
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-3">Hosting Frequency</label>
+<div class="flex bg-[#F0EEFF] p-1 rounded-full gap-1">
+<div class="radio-pill bg-primary text-white font-semibold">1-2 times/week</div>
+<div class="radio-pill text-text-secondary">3-4 times/week</div>
+<div class="radio-pill text-text-secondary">Almost daily</div>
+</div>
+</div>
+<!-- Field Group: Why -->
+<div>
+<label class="block text-sm font-semibold text-text-primary mb-2">Why would you be a great host?</label>
+<textarea class="input-field resize-none" placeholder="Tell us about your hosting style or past experiences..." rows="4"></textarea>
+<div class="text-right mt-1">
+<span class="text-text-muted text-xs">0/200</span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="space-y-4 pt-4">
+<button class="w-full bg-accent text-white h-[56px] rounded-lg font-semibold text-[17px] flex items-center justify-center hover:opacity-90 transition-opacity" type="submit">
+            Apply to be a Founding Host →
+          </button>
+<p class="text-center text-text-muted text-xs px-4">
+            We review every application personally. Approved hosts will receive a welcome kit and invite code within 48 hours.
+          </p>
+</div>
+</form>
+</div>
+</main>
+<!-- END: Application Form Section -->
+<!-- BEGIN: Social Proof Strip -->
+<footer class="pb-24 px-4">
+<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-2xl border border-[#E8E4FF] text-center">
+<p class="text-xs italic text-text-secondary mb-3">"I love hosting game nights in HSR. Evora makes it so much easier to find people!"</p>
+<span class="text-primary font-bold text-sm">— Arjun (HSR Layout)</span>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-[#E8E4FF] text-center">
+<p class="text-xs italic text-text-secondary mb-3">"Being a founding host allowed me to grow my book club from 3 to 30 people."</p>
+<span class="text-primary font-bold text-sm">— Meera (Koramangala)</span>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-[#E8E4FF] text-center">
+<p class="text-xs italic text-text-secondary mb-3">"The vibe is amazing. Highly recommend applying before the spots are gone."</p>
+<span class="text-primary font-bold text-sm">— Rohan (Indiranagar)</span>
+</div>
+</div>
+</footer>
+<!-- END: Social Proof Strip -->
+<!-- Scripts for small interactivity (toggling chips) -->
+<script data-purpose="form-interactivity">
+    // Simplified chip toggle logic for demonstration
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('chip-active');
+        chip.classList.toggle('chip-inactive');
+      });
+    });
+
+    // Simplified radio pill toggle logic
+    document.querySelectorAll('.radio-pill').forEach(pill => {
+      pill.addEventListener('click', function() {
+        const parent = this.parentElement;
+        parent.querySelectorAll('.radio-pill').forEach(p => {
+          p.classList.remove('bg-primary', 'text-white', 'font-semibold');
+          p.classList.add('text-text-secondary');
+        });
+        this.classList.add('bg-primary', 'text-white', 'font-semibold');
+        this.classList.remove('text-text-secondary');
+      });
+    });
+  </script>
+</body></html>

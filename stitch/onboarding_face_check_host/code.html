@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2D1DB5",
+                        "accent": "#FF5F1F",
+                        "background-light": "#F7F6FE",
+                        "background-dark": "#1a125e",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        @keyframes pulse-orange {
+            0% { box-shadow: 0 0 0 0 rgba(255, 95, 31, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 95, 31, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 95, 31, 0); }
+        }
+        .animate-pulse-orange {
+            animation: pulse-orange 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-slate-900 px-6 py-4 md:px-10">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">evora.club</h2>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<main class="flex-1 flex items-center justify-center p-4">
+<div class="w-full max-w-[480px] bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden">
+<!-- Progress Section -->
+<div class="px-8 pt-8 pb-4">
+<div class="flex items-center justify-between mb-6">
+<div class="flex gap-2">
+<div class="h-2 w-10 rounded-full bg-primary"></div>
+<div class="h-2 w-10 rounded-full bg-primary"></div>
+<div class="h-2 w-10 rounded-full bg-primary"></div>
+<div class="h-2 w-10 rounded-full bg-accent animate-pulse-orange"></div>
+<div class="h-2 w-10 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Step 4 of 5</span>
+</div>
+<div class="space-y-2 mb-8">
+<h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">One last step — face check</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                To ensure the safety of our community, we need a quick identity verification. This only takes 10 seconds.
+                            </p>
+</div>
+<!-- Viewfinder Component -->
+<div class="relative aspect-[4/5] rounded-2xl border-2 border-dashed border-primary bg-slate-50 dark:bg-slate-800/50 flex flex-col items-center justify-center overflow-hidden">
+<!-- Overlay/Guide -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-3/4 aspect-[3/4] border-2 border-primary/40 rounded-[50%] flex items-center justify-center">
+<div class="w-[90%] aspect-[3/4] border border-primary/20 rounded-[50%]"></div>
+</div>
+</div>
+<!-- Content -->
+<div class="z-10 text-center px-6">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+<span class="material-symbols-outlined text-4xl">face</span>
+</div>
+<p class="text-slate-900 dark:text-white text-lg font-bold">Position your face here</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-2 max-w-[240px] mx-auto">
+                                    Align your face within the oval guide and ensure you are in a well-lit area.
+                                </p>
+</div>
+<!-- Camera Feed Placeholder (Visual Only) -->
+<div class="absolute inset-0 -z-10 opacity-10">
+<div class="w-full h-full bg-gradient-to-tr from-primary to-accent" data-alt="Abstract gradient pattern representing camera background"></div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-8 pt-4">
+<button class="w-full h-14 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all shadow-lg shadow-primary/20 active:scale-[0.98]">
+<span class="material-symbols-outlined">photo_camera</span>
+                            Take Selfie
+                        </button>
+<div class="mt-6 flex items-center justify-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Your data is encrypted and secure</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="p-6 text-center">
+<p class="text-slate-400 dark:text-slate-500 text-sm font-medium">
+                    © 2024 evora.club • Identity Verification Powered by SecureFace
+                </p>
+</footer>
+</div>
+</div>
+</body></html>

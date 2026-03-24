@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile | evora.club</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'evora-primary': '#2D1DB5',
+            'evora-accent': '#FF5F1F',
+            'evora-bg': '#F7F6FE',
+            'evora-card': '#FFFFFF',
+            'evora-text': '#1A1A2E',
+            'evora-text-muted': '#5A5A7A',
+            'evora-success': '#0D9E75',
+            'evora-gold': '#FFD700',
+            'evora-danger': '#E24B4A',
+            'evora-stat-label': '#9898B0',
+            'evora-chip-bg': '#F0EEFF',
+            'evora-interest-bg': '#EDE9FF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layouts">
+    body {
+      background-color: #F7F6FE;
+    }
+    .profile-container {
+      max-width: 800px;
+    }
+    .avatar-border {
+      border: 3px solid #FFFFFF;
+    }
+    .tab-active {
+      border-bottom: 2px solid #2D1DB5;
+      color: #2D1DB5;
+    }
+  </style>
+</head>
+<body class="font-sans text-evora-text antialiased">
+<!-- BEGIN: MainContainer -->
+<main class="profile-container mx-auto px-4 py-8 space-y-6">
+<!-- BEGIN: ProfileHeaderCard -->
+<section class="bg-evora-card rounded-[20px] overflow-hidden shadow-sm" data-purpose="profile-header">
+<!-- Top Indigo Band -->
+<div class="h-20 bg-evora-primary"></div>
+<div class="px-6 pb-8 -mt-10 flex flex-col items-center">
+<!-- Avatar Section -->
+<div class="relative mb-4">
+<img alt="User Avatar" class="w-20 h-20 rounded-full avatar-border object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrtzqZM1l_sSG76iuTg1SQRFCX5cVKYEzOj8vEb2Wwgc1CaMuzfNfciI6QRQRbcIm_O3t5Yu__uQTg3rQLRjSYIiC5RbYZSr1aWFB8NXMpqIRzG-OarEsAPJua85hfVScHZH4W0Sjmfm-WWS4XndcLd8jFPxE-w3Q95ejUwbPrWJgVyT0qY4qAOswij_gk2StTGGYlRw_pWNBw1SJZmWTUHL72HL6MhlIQfqL6OIY3xWZyj25pt2jI8mvos7wAcq4XHJynEDEDSbGd"/>
+</div>
+<!-- Identity Section -->
+<div class="text-center space-y-2 mb-6">
+<div class="flex items-center justify-center gap-2">
+<h1 class="text-[20px] font-bold">Alex Thompson</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold border border-evora-gold text-evora-text">
+<span class="mr-1">★</span> Founding Host
+            </span>
+</div>
+<div class="flex items-center justify-center gap-3">
+<span class="text-evora-success text-sm font-semibold">✓ Verified</span>
+<span class="bg-evora-chip-bg text-evora-primary px-3 py-1 rounded-full text-xs font-medium">
+              📍 Koramangala
+            </span>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-3 w-full border-t border-gray-50 pt-6">
+<div class="text-center">
+<div class="text-[24px] font-bold text-evora-primary leading-tight">12</div>
+<div class="text-[11px] text-evora-stat-label font-medium uppercase tracking-wider">Events Hosted</div>
+</div>
+<div class="text-center border-x border-gray-100">
+<div class="text-[24px] font-bold text-evora-primary leading-tight">48</div>
+<div class="text-[11px] text-evora-stat-label font-medium uppercase tracking-wider">Events Joined</div>
+</div>
+<div class="text-center">
+<div class="text-[24px] font-bold text-evora-primary leading-tight">4.9</div>
+<div class="text-[11px] text-evora-stat-label font-medium uppercase tracking-wider">Rating</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ProfileHeaderCard -->
+<!-- BEGIN: VerificationCard -->
+<section class="bg-evora-card rounded-[16px] p-5 shadow-sm" data-purpose="verification-status">
+<h2 class="text-[13px] font-semibold mb-4">Your Verification</h2>
+<div class="space-y-3 mb-5">
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<svg class="w-5 h-5 text-evora-success" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="text-evora-text-muted">Phone verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<svg class="w-5 h-5 text-evora-success" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="text-evora-text-muted">Profile photo added</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<svg class="w-5 h-5 text-evora-success" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="text-evora-text-muted">Face check complete</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-sm">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full border-2 border-gray-200"></div>
+<span class="text-evora-text-muted">ID verification</span>
+</div>
+<span class="bg-gray-100 text-gray-500 text-[10px] font-bold px-2 py-0.5 rounded uppercase">Coming soon</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold">
+<span class="text-evora-success">Verification: 100%</span>
+</div>
+<div class="w-full bg-gray-100 rounded-full h-2">
+<div class="bg-evora-success h-2 rounded-full w-full"></div>
+</div>
+</div>
+</section>
+<!-- END: VerificationCard -->
+<!-- BEGIN: InterestsSection -->
+<section class="bg-evora-card rounded-[16px] p-5 shadow-sm" data-purpose="interests">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-[16px] font-bold">What you're into</h2>
+<button class="text-evora-primary text-sm font-semibold hover:underline">Edit</button>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-evora-interest-bg text-evora-primary px-4 py-1.5 rounded-full text-sm font-medium">Board Games</span>
+<span class="bg-evora-interest-bg text-evora-primary px-4 py-1.5 rounded-full text-sm font-medium">Techno</span>
+<span class="bg-evora-interest-bg text-evora-primary px-4 py-1.5 rounded-full text-sm font-medium">Padel</span>
+<span class="bg-evora-interest-bg text-evora-primary px-4 py-1.5 rounded-full text-sm font-medium">Philosophy</span>
+<span class="bg-evora-interest-bg text-evora-primary px-4 py-1.5 rounded-full text-sm font-medium">Craft Beer</span>
+</div>
+</section>
+<!-- END: InterestsSection -->
+<!-- BEGIN: ActivityHistory -->
+<section class="bg-evora-card rounded-[16px] p-5 shadow-sm" data-purpose="activity-history">
+<div class="flex border-b border-gray-100 mb-4">
+<button class="flex-1 pb-3 text-sm font-bold tab-active">Hosted</button>
+<button class="flex-1 pb-3 text-sm font-medium text-evora-text-muted hover:text-evora-primary">Joined</button>
+</div>
+<div class="space-y-4">
+<!-- Event Row 1 -->
+<div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Event thumb" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEVJsa4Wwl51vsemXkTTsvCnxaiCo948vkuPhk8QjW-tkIZ91r1wCxyvbZXWm3txLbVKv2DO17vZZqu8_4JGwxtmo69f-zZ4YeAaiG3Pi-KxdPgBPZ-Tx5W2Zese6D5tp454EejTU9gDIIab7IRww0gzcRKw2YoyQGKLwDnlTbWUrZpEEhxKeZe5wPMVGvgyV3J1QzVA0tCEaKMfIv2mYD0TODdnDT8VBpqoCNM0EPCU7TpsRLmyqpiMT9PVKs7ThsMBY7_CNXMBL8"/>
+</div>
+<div>
+<h3 class="text-sm font-bold">Board Games &amp; Chill</h3>
+<p class="text-xs text-evora-text-muted">Nov 24 • 8 Attendees</p>
+</div>
+</div>
+<svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<!-- Event Row 2 -->
+<div class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Event thumb" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOlJ1vRi_gBqS6osSVxGEubGO6e3V2Ew6eTxTnKy0nnv7NNBfGB0MpoUMsZgHH67FZCBXHcge6vPUv1rTPHki8ZjyYwdM1GyjD6SC_9LH8e1P1mm8R-S0WuS-gu6zuoplc8TbHAyh5JjECHMf1RdA3Bvz-KcbcEF0Dj2viGFP7kMw-ILoA2ctde-6sP5gguBd99T5Xi0U2hlMl3T0QgvmoBcqJ6qn6pz992RmxKTbzZVzHt6yQk5dx1ffcZZd2GtEZBxZa8sNmNdbs"/>
+</div>
+<div>
+<h3 class="text-sm font-bold">Midweek Techno Session</h3>
+<p class="text-xs text-evora-text-muted">Oct 12 • 15 Attendees</p>
+</div>
+</div>
+<svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</section>
+<!-- END: ActivityHistory -->
+<!-- BEGIN: SettingsSection -->
+<section class="bg-evora-card rounded-[16px] p-2 shadow-sm" data-purpose="settings">
+<div class="divide-y divide-gray-50">
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
+<span class="text-sm font-medium">Edit Profile</span>
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
+<span class="text-sm font-medium">Notification Preferences</span>
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
+<span class="text-sm font-medium">Privacy Settings</span>
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
+<span class="text-sm font-medium">Help &amp; Support</span>
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition-colors">
+<span class="text-sm font-medium">Report a Problem</span>
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Logout Button -->
+<div class="p-4 pt-6 text-center">
+<button class="text-evora-danger font-bold text-sm hover:opacity-80 transition-opacity px-6 py-2">
+          Sign out
+        </button>
+</div>
+</section>
+<!-- END: SettingsSection -->
+</main>
+<!-- END: MainContainer -->
+</body></html>
